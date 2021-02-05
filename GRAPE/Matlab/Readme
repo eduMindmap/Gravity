@@ -1,1 +1,7 @@
+The following version of the code has been written in Matlab. 
+A userguide manual is present in the folder where the external user can learn how to use the package.
 
+The Matlab version of GRAPE uses two built-in functions (inpolyhedron.m and stlread.m) that are downloaded from the Matlab File Exchange page.
+
+The author of the "inpolyhedron.m" function is Sven Holcomb, who deserves all the copyright for this.
+The "stlread.m" version used in GRAPE was originally downloaded from the File Exchange, is now a built-in function in more updated released. In any case all the copyright for this function belogs to Mathworks Inc.

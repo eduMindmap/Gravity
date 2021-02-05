@@ -1,4 +1,4 @@
-function GRAPE_v1
+data_probes = function GRAPE_v1
 
     % GRAPE (Gravity iRregular shAPEs) is a Matlab software to compute the
     % gravitational field of irregular bodies using STL files to describe
@@ -160,8 +160,6 @@ function GRAPE_v1
                         
                         spheres_struct.r(condition) = temporary.r(pos_max); 
                         spheres_struct.vol(condition) = 4/3*pi*spheres_struct.r(condition)^3;
-%                         spheres_struct.m(condition) = spheres_struct.vol(condition) * data.rho;
-%                         spheres_struct.m(condition) = 1;
                         spheres_struct.x_c(condition) = temporary.x_c(pos_max); 
                         spheres_struct.y_c(condition) = temporary.y_c(pos_max); 
                         spheres_struct.z_c(condition) = temporary.z_c(pos_max); 
@@ -362,7 +360,6 @@ end
 
 function totalVolume = renderSTL(fv)
 
-%     figure(1)
     hold on;
     patch(fv,'FaceColor', [0.8 0.8 1.0], ...
          'EdgeColor', 'none', ...
@@ -374,7 +371,6 @@ function totalVolume = renderSTL(fv)
     material('dull');
     alpha(0.2)                                                             % Flag: ho aggiunto questo solo per vedere le sfere dentro
     axis('image');
-%     view([-135 35]);
     view([180 0]);
     
     [totalVolume, totalArea] = stlVolume(fv.vertices', fv.faces');
@@ -382,8 +378,6 @@ function totalVolume = renderSTL(fv)
 end
 
 function [totalVolume, miao] = renderSTL2(fv)
-
-%     figure(1)
     hold on;
     miao = patch(fv,'FaceColor', [0.8 0.8 1.0], ...
                  'EdgeColor', 'none', ...
@@ -395,8 +389,6 @@ function [totalVolume, miao] = renderSTL2(fv)
     material('dull');
     alpha(0.9)                                                             % Flag: ho aggiunto questo solo per vedere le sfere dentro
     axis('image');
-%     view([-135 35]);
-%     view([180 0]);
     
     [totalVolume, totalArea] = stlVolume(fv.vertices', fv.faces');
     
@@ -545,7 +537,6 @@ end
 
 function data_probes = parallelComputationField(data, spheres_struct)
 
-    % T-Rex
     data_probes.x_min = data.x_min;
     data_probes.x_max = data.x_max;
     data_probes.y_min = data.y_min;
@@ -565,32 +556,6 @@ function data_probes = parallelComputationField(data, spheres_struct)
    x_rand = x_rand';
    y_rand = y_rand';
    z_rand = z_rand';
-    
-   
-%     k = 1;
-%     max_x = data.x_bary+k;
-%     min_x = data.x_bary-k;
-%     max_y = data.y_bary+k;
-%     min_y = data.y_bary-k;
-%     max_z = data.z_bary+k;
-%     min_z = data.z_bary-k;
-%     
-%     x_rand = (max_x-min_x).*rand(data.N_points_probe,1) + min_x;
-%     y_rand = (max_y-min_y).*rand(data.N_points_probe,1) + min_y;
-%     z_rand = (max_z-min_z).*rand(data.N_points_probe,1) + min_z;
-%     
-%     x_rand = x_rand';
-%     y_rand = y_rand';
-%     z_rand = z_rand';
-
-
-
-%     x_rand_0 = linspace(min_x, max_x, data.N_points_probe);
-%     y_rand_0 = linspace(min_y, max_y, data.N_points_probe);
-%     z_rand_0 = linspace(min_z, max_z, data.N_points_probe); 
-%     
-%     [x_rand, y_rand, z_rand] = meshgrid(x_rand_0, y_rand_0, z_rand_0);     
-
  
     tic
     
@@ -724,13 +689,7 @@ function data_probes = parallelComputationField(data, spheres_struct)
     data_probes.g_x_point = g_x_point;
     data_probes.g_y_point = g_y_point;
     data_probes.g_z_point = g_z_point;
-    
- 
-%     figure(3)
-%     quiver3(x_rand, y_rand, z_rand, g_x_in_point, g_y_in_point, g_z_in_point, 10)
-%     hold on
-%     plot3(spheres_struct.x_c, spheres_struct.y_c ,spheres_struct.z_c, 'or')
-    
+
 end
 
 function [inp_var] = readInputFile

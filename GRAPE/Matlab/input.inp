@@ -5,15 +5,15 @@
     1e13		% Total mass of the object [kg]
     4000    % Maximum size of the object [m]
     20		% Number of probes per latus (i.e. NxNxN)
-    4000		% Maximum x coordinate for probes 
-    -4000		% Minimum x coordinate for probes 
-    4000		% Maximum y coordinate for probes 
-    -4000		% Minimum y coordinate for probes 
-    4000		% Maximum z coordinate for probes 
-    -4000		% Minimum z coordinate for probes 
-    10		% x slice coordinate for Fig. 4
-    10		% y slice coordinate for Fig. 5
-    10		% z slice coordinate for Fig. 6
-    10		% x slice coordinate for Fig. 7
-    10		% y slice coordinate for Fig. 8
-    10		% z slice coordinate for Fig. 9
+    4000		% Maximum x coordinate for probes [m]
+    -4000		% Minimum x coordinate for probes [m]
+    4000		% Maximum y coordinate for probes [m]
+    -4000		% Minimum y coordinate for probes [m]
+    4000		% Maximum z coordinate for probes [m]
+    -4000		% Minimum z coordinate for probes [m]
+    10		% x slice coordinate [m] for Fig. 4
+    10		% y slice coordinate [m] for Fig. 5
+    10		% z slice coordinate [m] for Fig. 6
+    10		% x slice coordinate [m] for Fig. 7
+    10		% y slice coordinate [m] for Fig. 8
+    10		% z slice coordinate [m] for Fig. 9

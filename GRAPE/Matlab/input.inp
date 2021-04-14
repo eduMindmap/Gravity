@@ -1,0 +1,29 @@
+% Input file for the gravitational computation of gravity around the STL file
+    rosetta2.stl	% stl_file_name (with stl extension)
+    50		% Number of spheres to use to fill the STL shape
+    5		% Number of iterations needed to place each single sphere
+    1e16		% Total mass of the object [kg] 
+    4000    % Maximum size of the object [m]
+    50		% Number of probes per latus (i.e. NxNxN)
+    10000		% Maximum x coordinate for probes [m]
+    -10000		% Minimum x coordinate for probes [m]
+    10000		% Maximum y coordinate for probes [m]
+    -10000		% Minimum y coordinate for probes [m]
+    10000		% Maximum z coordinate for probes [m]
+    -10000		% Minimum z coordinate for probes [m]
+    10		% x slice coordinate [m] for Fig. 4
+    10		% y slice coordinate [m] for Fig. 5
+    10		% z slice coordinate [m] for Fig. 6
+    10		% x slice coordinate [m] for Fig. 7
+    10		% y slice coordinate [m] for Fig. 8
+    10		% z slice coordinate [m] for Fig. 9
+    1		% Boolean variable to calculate the orbit (0 = no; 1 = yes)
+    -3000		% Initial condition on the position - x component (x0) [m]
+    3000		% Initial condition on the position - y component (y0) [m]
+    3000		% Initial condition on the position - z component (z0) [m]
+    15		% Initial condition on the velocity - x component (vx0) [m/s]
+    0		% Initial condition on the velocity - y component (vy0) [m/s]
+    0		% Initial condition on the velocity - z component (vz0) [m/s]
+    1000		% Final time of integration [s]
+    35		% Number of steps for the ODE
+	10		% Number of probes in the ODE
